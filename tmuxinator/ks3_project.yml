@@ -1,0 +1,33 @@
+# ~/.tmuxinator/ks3_project.yml
+
+name: ks3_project
+root: ~/Projects/ks3
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+windows:
+  - editor:
+      layout: b132,156x81,0,0[156x66,0,0,51,156x14,0,67{79x14,0,67,52,76x14,80,67,55}]
+      panes:
+        - # editor
+        - # shell 1
+        - # shell 2
+  - servers:
+      layout: even-vertical 
+      panes:
+        - # shell 1
+        - # shell 2
+        - # shell 3
